@@ -1,6 +1,6 @@
 {
   "name": "@ferreira029/knexty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Knexty is a TypeScript-first schema DSL, type generator, and migration toolkit for Knex.",
   "license": "MIT",
   "keywords": [
@@ -13,6 +13,24 @@
   "sideEffects": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferreira029/knexty.git"
+  },
+  "author": {
+    "name": "Ferreira029",
+    "url": "https://github.com/ferreira029"
+  },
+  "contributors": [
+    {
+      "name": "Ferreira029",
+      "url": "https://github.com/ferreira029"
+    }
+  ],
+  "homepage": "https://github.com/ferreira029/knexty",
+  "bugs": {
+    "url": "https://github.com/ferreira029/knexty/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
