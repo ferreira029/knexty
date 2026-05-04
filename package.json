@@ -1,0 +1,81 @@
+{
+  "name": "@ferreira029/knexty",
+  "version": "1.0.0",
+  "description": "Knexty is a TypeScript-first schema DSL, type generator, and migration toolkit for Knex.",
+  "license": "MIT",
+  "keywords": [
+    "knex",
+    "schema",
+    "typescript",
+    "migrations",
+    "database"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "knexty": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "PRODUCTION.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && node --test test/*.test.js",
+    "test:e2e:postgres": "tsc -p tsconfig.json && node --test test/postgres-e2e.test.js",
+    "check": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.json && node --test test/*.test.js",
+    "prepack": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.json && node --test test/*.test.js"
+  },
+  "dependencies": {
+    "jiti": "^2.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "better-sqlite3": ">=9.0.0",
+    "knex": ">=3.0.0",
+    "mysql2": ">=3.0.0",
+    "oracledb": ">=6.0.0",
+    "pg": ">=8.0.0",
+    "sqlite3": ">=5.0.0",
+    "tedious": ">=16.0.0"
+  },
+  "peerDependenciesMeta": {
+    "better-sqlite3": {
+      "optional": true
+    },
+    "mysql2": {
+      "optional": true
+    },
+    "oracledb": {
+      "optional": true
+    },
+    "pg": {
+      "optional": true
+    },
+    "sqlite3": {
+      "optional": true
+    },
+    "tedious": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "knex": "^3.1.0"
+  }
+}
